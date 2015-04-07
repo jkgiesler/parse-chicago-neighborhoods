@@ -28,7 +28,7 @@ def spherical_mercator_projection(longitude,latitude):
 
 def rayintersectseg(p, edge):
 	#http://rosettacode.org/wiki/Ray-casting_algorithm#Python
-    #takes a point p=Pt() and an edge of two endpoints a,b=Pt() of a line segment returns boolean
+	#takes a point p=Pt() and an edge of two endpoints a,b=Pt() of a line segment returns boolean
     a,b = edge
     if a.y > b.y:
         a,b = b,a
@@ -89,8 +89,7 @@ def find_neighborhood(test_long,test_lat,all_neighborhoods):
 	for neighborhood in all_neighborhoods:
 		correct_neighborhood = ispointinside(Pt(x=x,y=y),neighborhood)
 		if correct_neighborhood:
-			#print(neighborhood.name) #its name
-			return neighborhood.name #prove that it only works for one of the neighborhoods
+			return neighborhood.name
 
 all_neighborhoods = get_all_neighborhoods()
 
